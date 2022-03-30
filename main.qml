@@ -1,6 +1,7 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.3
 import io.qt.Backend 1.0
+import io.qt.Menu 1.0
 import io.qt.OrderManage 1.0
 import QtMultimedia 5.0
 
@@ -157,7 +158,6 @@ ApplicationWindow {
 
 
     function cartUpdate(){
-        cartPage.cartReload()
         menuPage.cartReload()
     }
 
@@ -167,6 +167,10 @@ ApplicationWindow {
 
     OrderManage {
         id: orderManage;
+    }
+
+    Menu {
+        id: menu;
     }
 
     SoundEffect {
@@ -196,7 +200,7 @@ ApplicationWindow {
         id: bgmPlayer
         source: "sound/bgm.wav"
         volume: 0.5
-        autoPlay: true
+        autoPlay: false//true
         loops: SoundEffect.Infinite
     }
 
@@ -218,26 +222,6 @@ ApplicationWindow {
 
         Page2{
             id: menuPage
-        }
-
-        Page3{
-            id: optionPage
-        }
-
-        Page4{
-            id: cartPage
-        }
-
-        Page5{
-            id: creditPage
-        }
-
-        Page6{
-            id: completePage
-        }
-
-        Page7{
-            id: failPage
         }
     }
 
@@ -263,17 +247,17 @@ ApplicationWindow {
                 timeCount = 0;
             }
 
-            if((curPage == 1) || (curPage == 2) || (curPage == 3)){// || (curPage ==4)){
-                if(timeCount > 30){
-                    timeCount = 0;
-                    swipeView.currentIndex = 0;
-                }
-            }else if((curPage == 5) || (curPage == 6)){
-                if(timeCount > 5){//15){
-                    timeCount = 0;
-                    swipeView.currentIndex = 0;
-                }
-            }
+//            if((curPage == 1) || (curPage == 2) || (curPage == 3)){// || (curPage ==4)){
+//                if(timeCount > 30){
+//                    timeCount = 0;
+//                    swipeView.currentIndex = 0;
+//                }
+//            }else if((curPage == 5) || (curPage == 6)){
+//                if(timeCount > 5){//15){
+//                    timeCount = 0;
+//                    swipeView.currentIndex = 0;
+//                }
+//            }
 
         }
     }
@@ -300,7 +284,7 @@ ApplicationWindow {
                 bgmPlayer.volume = globalSoundVolume;
             }
 
-            globalIsTestMode = backend.getIsTest();
+//            globalIsTestMode = backend.getIsTest();
         }
     }
 

@@ -1,0 +1,775 @@
+[2021-09-24 15:37:12]  [Menu]       menuDBopen : menuTypeList 2
+[2021-09-24 15:37:12]  [Menu]       menuDBopen : menuList 2
+[2021-09-24 15:37:12]  ================================
+[2021-09-24 15:37:13]  [RBPrinter] Printer Open : 0
+[2021-09-24 15:37:13]  [DB]         ReloadDate 
+[2021-09-24 15:37:13]  [DB]         ReloadCheckDB 
+[2021-09-24 15:37:13]  [BACKEND]    CreateDB : 210924
+[2021-09-24 15:37:13]  [DB]         CreateDB : CREATE TABLE RB2021_09_24 (order_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, time TEXT, menu TEXT, price INT, cardcomp TEXT, cardnum TEXT, appnum TEXT, trandate TEXT, iscancel TEXT, acqu_code TEXT, card_gb TEXT, version INT)
+[2021-09-24 15:37:13]  [BACKEND]    reloadSaleData
+[2021-09-24 15:37:13]  [DB]         ReloadDate 
+[2021-09-24 15:37:13]  [BACKEND]    reloadContent : 20210924
+[2021-09-24 15:37:13]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:37:13]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 22
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 15
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 16
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 19
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 37
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 32
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 9
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 3
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 13
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 29
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 25
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 21
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 13
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 9
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 22
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 15
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 16
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 19
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 37
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 32
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 9
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 3
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 13
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 29
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 25
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 21
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 13
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:37:14]  [DB]         Content count : 12
+[2021-09-24 15:37:14]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:37:14]  [DB]         reloadcontent load : 9
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:37:14]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:37:14]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:37:18]  [OrderManage] clearCart
+[2021-09-24 15:37:21]  [OrderManage] addOrder : 콜드브루 커피(0) 1, 0, 0, 3500
+[2021-09-24 15:37:21]  [OrderManage] addOrder : OK
+[2021-09-24 15:37:24]  [OrderManage] removeOrder : 0
+[2021-09-24 15:37:27]  [OrderManage] addOrder : 블랙티(0) 1, 0, 1, 2800
+[2021-09-24 15:37:27]  [OrderManage] addOrder : OK
+[2021-09-24 15:37:29]  [QML]     Credit
+[2021-09-24 15:37:29]  [BACKEND]    doCredit : 2800
+[2021-09-24 15:37:29]  [BACKEND]    doCredit : 블랙티
+[2021-09-24 15:37:31]  [QML]     creditNotiApproving
+[2021-09-24 15:37:33]  [BACKEND]    creditTimerStop
+[2021-09-24 15:37:33]  [BACKEND]    Approve Test Mode
+[2021-09-24 15:37:35]  [RBPrinter]  RBPrint Success: 00029939
+[2021-09-24 15:37:35]  [RBCredit]   Delete Credit queue : 0025316
+[2021-09-24 15:37:36]  [KIOSKtoPC]  SendOrder : 블랙티
+[2021-09-24 15:37:36]  [PCtoKIOSK]  DeleteOrder(SUCCESS): %d00029939
+[2021-09-24 15:37:46]  [OrderManage] clearCart
+[2021-09-24 15:37:47]  [OrderManage] addOrder : 비타C쥬스(0) 1, 0, 0, 3000
+[2021-09-24 15:37:47]  [OrderManage] addOrder : OK
+[2021-09-24 15:37:48]  [QML]     Credit
+[2021-09-24 15:37:48]  [BACKEND]    doCredit : 3000
+[2021-09-24 15:37:48]  [BACKEND]    doCredit : 비타C쥬스
+[2021-09-24 15:37:49]  [QML]     creditNotiApproving
+[2021-09-24 15:37:51]  [BACKEND]    creditTimerStop
+[2021-09-24 15:37:51]  [BACKEND]    Approve Test Mode
+[2021-09-24 15:37:54]  [RBPrinter]  RBPrint Success: 00029354
+[2021-09-24 15:37:54]  [RBCredit]   Delete Credit queue : 0025316
+[2021-09-24 15:37:55]  [KIOSKtoPC]  SendOrder : 비타C쥬스
+[2021-09-24 15:37:55]  [PCtoKIOSK]  DeleteOrder(SUCCESS): %d00029354
+[2021-09-24 15:38:26]  [Menu]       menuDBopen : menuTypeList 2
+[2021-09-24 15:38:26]  [Menu]       menuDBopen : menuList 2
+[2021-09-24 15:38:26]  ================================
+[2021-09-24 15:38:27]  [RBPrinter] Printer Open : 0
+[2021-09-24 15:38:27]  [DB]         ReloadDate 
+[2021-09-24 15:38:27]  [DB]         ReloadCheckDB 
+[2021-09-24 15:38:27]  [BACKEND]    reloadContent : 111
+[2021-09-24 15:38:27]  [DB]         ReloadContent : 111
+[2021-09-24 15:38:27]  [DB]         ReloadContent count : 0
+[2021-09-24 15:38:27]  [DB]         select_str : select * from RB2021_09_24
+[2021-09-24 15:38:27]  [DB]         reloadcontent load : 0
+[2021-09-24 15:38:27]  [BACKEND]    reloadCheckinContent
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 22
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 15
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 16
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 19
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 37
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 32
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 3
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 29
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 25
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 21
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 22
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 15
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 16
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 19
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 37
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 32
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 3
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 29
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 25
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 21
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:38:28]  [DB]         Content count : 12
+[2021-09-24 15:38:28]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:38:28]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:38:28]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:38:28]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:38:44]  [Menu]       menuDBopen : menuTypeList 2
+[2021-09-24 15:38:44]  [Menu]       menuDBopen : menuList 2
+[2021-09-24 15:38:44]  ================================
+[2021-09-24 15:38:45]  [RBPrinter] Printer Open : 0
+[2021-09-24 15:38:45]  [DB]         ReloadDate 
+[2021-09-24 15:38:45]  [DB]         ReloadCheckDB 
+[2021-09-24 15:38:45]  [BACKEND]    reloadContent : 111
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 111
+[2021-09-24 15:38:45]  [DB]         ReloadContent count : 0
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_24
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 0
+[2021-09-24 15:38:45]  [BACKEND]    reloadCheckinContent
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 22
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 15
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 16
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 19
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 37
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 32
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 3
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 29
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 25
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 21
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-29
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_29
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 22
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-30
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_30
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 15
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-08-31
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_08_31
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 16
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-01
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_01
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 19
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-02
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_02
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 37
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-03
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_03
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-04
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_04
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 32
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-05
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_05
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-06
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-06
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-07
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_07
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 3
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-08
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_08
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-09
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_09
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-10
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_10
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 29
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-11
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_11
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 25
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-12
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_12
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 21
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-13
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_13
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 13
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-14
+[2021-09-24 15:38:45]  [DB]         Content count : 12
+[2021-09-24 15:38:45]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-24 15:38:45]  [DB]         reloadcontent load : 9
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-15
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-15
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-16
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-16
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-17
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-17
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-18
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-18
+[2021-09-24 15:38:45]  [DB]         ReloadContent : 2021-09-19
+[2021-09-24 15:38:45]  [DB]         Content load Fail : 2021-09-19
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-20
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-20
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-21
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-21
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-22
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-22
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-23
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-23
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-24
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-24
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-25
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-25
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-26
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-26
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-27
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-27
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-28
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-28
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-29
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-29
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-09-30
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-09-30
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-01
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-01
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-02
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-02
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-03
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-03
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-04
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-04
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-05
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-05
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-06
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-06
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-07
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-07
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-08
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-08
+[2021-09-24 15:38:46]  [DB]         ReloadContent : 2021-10-09
+[2021-09-24 15:38:46]  [DB]         Content load Fail : 2021-10-09
+[2021-09-24 15:38:50]  [OrderManage] clearCart
+[2021-09-24 15:38:51]  [OrderManage] addOrder : 블랙티(0) 1, 0, 0, 2800
+[2021-09-24 15:38:51]  [OrderManage] addOrder : OK
+[2021-09-24 15:38:52]  [QML]     Credit
+[2021-09-24 15:38:52]  [BACKEND]    doCredit : 2800
+[2021-09-24 15:38:52]  [BACKEND]    doCredit : 블랙티
+[2021-09-24 15:38:53]  [QML]     creditNotiApproving
+[2021-09-24 15:38:55]  [BACKEND]    creditTimerStop
+[2021-09-24 15:38:55]  [BACKEND]    Approve Test Mode
+[2021-09-24 15:38:58]  [RBPrinter]  RBPrint Success: 00030370
+[2021-09-24 15:38:58]  [RBCredit]   Delete Credit queue : 0025316
+[2021-09-24 15:38:58]  [KIOSKtoPC]  SendOrder : 블랙티
+[2021-09-24 15:38:58]  [PCtoKIOSK]  DeleteOrder(SUCCESS): %d00030370

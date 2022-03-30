@@ -9,6 +9,7 @@ Item {
     property string __image_src: ""
     property string __drink_text_kor: ""
     property string __drink_text_eng: ""
+    property string __drink_text_description: ""
 
     id: drinkItemOption
     width: 304
@@ -30,7 +31,7 @@ Item {
             height: 35
             color: "#5b5e66"
             font.family: fontBold.name
-            text: qsTr(__drink_text_kor)
+            text: qsTr(__drink_text_description)
             anchors.horizontalCenterOffset: 0
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter

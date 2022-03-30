@@ -18,13 +18,14 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    menu = new Menu();
+//    menu = new Menu();
 
     rblog = new RBLog();
 
     rblog->AddLogLine("================================");
 
     app.setOverrideCursor(QCursor(Qt::BlankCursor));
+    qmlRegisterType<Menu>("io.qt.Menu", 1, 0, "Menu");
     qmlRegisterType<Backend>("io.qt.Backend", 1, 0, "Backend");
     qmlRegisterType<OrderManage>("io.qt.OrderManage", 1, 0, "OrderManage");
 

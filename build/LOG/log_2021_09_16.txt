@@ -1,0 +1,77 @@
+[2021-09-16 00:00:00]  [BACKEND]    CreateDB : 210916
+[2021-09-16 00:00:00]  [DB]         CreateDB : CREATE TABLE RB2021_09_16 (order_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, time TEXT, menu TEXT, price INT, cardcomp TEXT, cardnum TEXT, appnum TEXT, trandate TEXT, iscancel TEXT, acqu_code TEXT, card_gb TEXT, version INT)
+[2021-09-16 00:00:00]  [BACKEND]    reloadSaleData
+[2021-09-16 00:00:00]  [DB]         ReloadDate 
+[2021-09-16 00:00:00]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 00:00:00]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 00:00:00]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:45]  [OrderManage] clearCart
+[2021-09-16 17:43:46]  [OrderManage] addOrder : 블랙티(0) 1, 0, 1, 2800
+[2021-09-16 17:43:46]  [OrderManage] addOrder : OK
+[2021-09-16 17:43:47]  [QML]     Credit
+[2021-09-16 17:43:47]  [BACKEND]    doCredit : 2800
+[2021-09-16 17:43:47]  [BACKEND]    doCredit : 블랙티
+[2021-09-16 17:43:47]  [RBCredit]   Approve : 2800
+[2021-09-16 17:43:50]  [RBCredit]   Approve result : -7
+[2021-09-16 17:43:50]  [BACKEND]    creditTimerStop
+[2021-09-16 17:43:50]  [BACKEND]    Credit Fail : 사용자 및 리더기 취소 요청
+[2021-09-16 17:43:50]  [RBCredit]   Delete Credit queue : 
+[2021-09-16 17:43:58]  [QML]       Enter Admin
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [BACKEND]    setReport
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         DayCheckout : 2021-09-160
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [BACKEND]    setReport
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         DayCheckout : 2021-09-160
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210914
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-14
+[2021-09-16 17:43:58]  [DB]         Content count : 12
+[2021-09-16 17:43:58]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-16 17:43:58]  [DB]         reloadcontent load : 9
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [BACKEND]    reloadCheckinContent
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [BACKEND]    setReport
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         DayCheckout : 2021-09-160
+[2021-09-16 17:43:58]  [BACKEND]    reloadContent : 20210916
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [BACKEND]    setReport
+[2021-09-16 17:43:58]  [DB]         ReloadContent : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         Content load Fail : 2021-09-16
+[2021-09-16 17:43:58]  [DB]         DayCheckout : 2021-09-160
+[2021-09-16 17:43:59]  [BACKEND]    AddLogin : 관리자(LOGIN)
+[2021-09-16 17:43:59]  [DB]         CreateCheckDB : CREATE TABLE RB2021_09_16 (date TEXT, time TEXT, user TEXT, log TEXT)
+[2021-09-16 17:43:59]  [DB]         AddCheckDB : INSERT INTO RB2021_09_16 (date, time, user, log) VALUES ('2021_09_16', '17:43:59', '관리자', 'LOGIN')
+[2021-09-16 17:44:01]  [BACKEND]    setIsTest
+[2021-09-16 17:44:01]  [BACKEND]    AddLogin : 관리자(SET TESTMODE)
+[2021-09-16 17:44:01]  [DB]         AddCheckDB : INSERT INTO RB2021_09_16 (date, time, user, log) VALUES ('2021_09_16', '17:44:01', '관리자', 'SET TESTMODE')
+[2021-09-16 17:44:01]  [BACKEND]    AddLogin : 관리자(LOGOUT)
+[2021-09-16 17:44:01]  [DB]         AddCheckDB : INSERT INTO RB2021_09_16 (date, time, user, log) VALUES ('2021_09_16', '17:44:01', '관리자', 'LOGOUT')
+[2021-09-16 17:44:03]  [OrderManage] clearCart
+[2021-09-16 17:44:03]  [OrderManage] addOrder : 비타C쥬스(0) 1, 0, 0, 3000
+[2021-09-16 17:44:03]  [OrderManage] addOrder : OK
+[2021-09-16 17:44:04]  [QML]     Credit
+[2021-09-16 17:44:04]  [BACKEND]    doCredit : 3000
+[2021-09-16 17:44:04]  [BACKEND]    doCredit : 비타C쥬스
+[2021-09-16 17:44:05]  [QML]     creditNotiApproving
+[2021-09-16 17:44:07]  [BACKEND]    creditTimerStop
+[2021-09-16 17:44:07]  [BACKEND]    Approve Test Mode
+[2021-09-16 17:44:10]  [RBPrinter]  RBPrint Success: 00025545
+[2021-09-16 17:44:10]  [RBCredit]   Delete Credit queue : 0025316
+[2021-09-16 17:44:10]  [KIOSKtoPC]  SendOrder : 비타C쥬스
+[2021-09-16 17:44:10]  [PCtoKIOSK]  DeleteOrder(SUCCESS): %d00025545

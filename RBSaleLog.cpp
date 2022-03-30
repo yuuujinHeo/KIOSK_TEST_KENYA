@@ -40,7 +40,8 @@ RBSaleLog::RBSaleLog()
     mapMenuPricenew["베리 밀크티"] = 4000;
     mapMenuPricenew["말차 밀크티"] = 4500;
     mapMenuPricenew["콜드브루 밀크커피"] = 4500;
-    mapMenuPricenew["옛날커피"] = 2000;
+    mapMenuPricenew["옛날 커피"] = 2000;
+    mapMenuPricenew["비타C쥬스"] = 3000;
 
     DayReport.total_sale_amt = 0;
     DayReport.total_sale_cnt = 0;

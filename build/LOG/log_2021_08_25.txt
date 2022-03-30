@@ -1,0 +1,939 @@
+[2021-08-25 15:58:16]  [Menu]       menuDBopen : menuTypeList 2
+[2021-08-25 15:58:16]  [Menu]       menuDBopen : menuList 2
+[2021-08-25 15:58:16]  ================================
+[2021-08-25 15:58:17]  [RBPrinter] Printer Open : 0
+[2021-08-25 15:58:18]  [DB]         ReloadDate 
+[2021-08-25 15:58:18]  [DB]         ReloadCheckDB 
+[2021-08-25 15:58:18]  [BACKEND]    CreateDB : 210825
+[2021-08-25 15:58:18]  [DB]         CreateDB : CREATE TABLE RB2021_08_25 (order_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, time TEXT, menu TEXT, price INT, cardcomp TEXT, cardnum TEXT, appnum TEXT, trandate TEXT, iscancel TEXT, acqu_code TEXT, card_gb TEXT, version INT)
+[2021-08-25 15:58:18]  [BACKEND]    reloadSaleData
+[2021-08-25 15:58:18]  [DB]         ReloadDate 
+[2021-08-25 15:58:18]  [BACKEND]    reloadContent : 20210825
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 15:58:18]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 15:58:18]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 15:58:22]  [OrderManage] clearCart
+[2021-08-25 15:59:03]  [Menu]       menuDBopen : menuTypeList 2
+[2021-08-25 15:59:03]  [Menu]       menuDBopen : menuList 2
+[2021-08-25 15:59:03]  ================================
+[2021-08-25 15:59:04]  [RBPrinter] Printer Open : 0
+[2021-08-25 15:59:04]  [DB]         ReloadDate 
+[2021-08-25 15:59:04]  [DB]         ReloadCheckDB 
+[2021-08-25 15:59:04]  [BACKEND]    reloadContent : 45
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 45
+[2021-08-25 15:59:04]  [DB]         ReloadContent count : 0
+[2021-08-25 15:59:04]  [DB]         select_str : select * from RB2021_08_25
+[2021-08-25 15:59:04]  [DB]         reloadcontent load : 0
+[2021-08-25 15:59:04]  [BACKEND]    reloadCheckinContent
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 15:59:04]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 15:59:04]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 15:59:05]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 15:59:05]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 15:59:10]  [OrderManage] clearCart
+[2021-08-25 15:59:13]  [OrderManage] addOrder : 비타C쥬스(0) 1, 0, 0, 3000
+[2021-08-25 15:59:13]  [OrderManage] addOrder : OK
+[2021-08-25 15:59:16]  [OrderManage] addOrder : 옛날커피(1) 1, 0, 0, 2000
+[2021-08-25 15:59:16]  [OrderManage] addOrder : OK
+[2021-08-25 15:59:58]  [Menu]       menuDBopen : menuTypeList 2
+[2021-08-25 15:59:58]  [Menu]       menuDBopen : menuList 2
+[2021-08-25 15:59:58]  ================================
+[2021-08-25 15:59:59]  [RBPrinter] Printer Open : 0
+[2021-08-25 15:59:59]  [DB]         ReloadDate 
+[2021-08-25 15:59:59]  [DB]         ReloadCheckDB 
+[2021-08-25 15:59:59]  [BACKEND]    reloadContent : 45
+[2021-08-25 15:59:59]  [DB]         ReloadContent : 45
+[2021-08-25 15:59:59]  [DB]         ReloadContent count : 0
+[2021-08-25 15:59:59]  [DB]         select_str : select * from RB2021_08_25
+[2021-08-25 15:59:59]  [DB]         reloadcontent load : 0
+[2021-08-25 15:59:59]  [BACKEND]    reloadCheckinContent
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:00:00]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:00:00]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:00:22]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:23]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:24]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:25]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:26]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:27]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:28]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:29]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:30]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:31]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:32]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:33]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:00:34]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:16:22]  [Menu]       menuDBopen : menuTypeList 2
+[2021-08-25 16:16:22]  [Menu]       menuDBopen : menuList 2
+[2021-08-25 16:16:22]  ================================
+[2021-08-25 16:16:23]  [RBPrinter] Printer Open : 0
+[2021-08-25 16:16:23]  [DB]         ReloadDate 
+[2021-08-25 16:16:23]  [DB]         ReloadCheckDB 
+[2021-08-25 16:16:23]  [BACKEND]    reloadContent : 45
+[2021-08-25 16:16:23]  [DB]         ReloadContent : 45
+[2021-08-25 16:16:23]  [DB]         ReloadContent count : 0
+[2021-08-25 16:16:23]  [DB]         select_str : select * from RB2021_08_25
+[2021-08-25 16:16:23]  [DB]         reloadcontent load : 0
+[2021-08-25 16:16:23]  [BACKEND]    reloadCheckinContent
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:16:24]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:16:24]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:19:16]  [Menu]       menuDBopen : menuTypeList 2
+[2021-08-25 16:19:16]  [Menu]       menuDBopen : menuList 2
+[2021-08-25 16:19:16]  ================================
+[2021-08-25 16:19:17]  [RBPrinter] Printer Open : 0
+[2021-08-25 16:19:17]  [DB]         ReloadDate 
+[2021-08-25 16:19:17]  [DB]         ReloadCheckDB 
+[2021-08-25 16:19:17]  [BACKEND]    reloadContent : 45
+[2021-08-25 16:19:17]  [DB]         ReloadContent : 45
+[2021-08-25 16:19:17]  [DB]         ReloadContent count : 0
+[2021-08-25 16:19:17]  [DB]         select_str : select * from RB2021_08_25
+[2021-08-25 16:19:17]  [DB]         reloadcontent load : 0
+[2021-08-25 16:19:17]  [BACKEND]    reloadCheckinContent
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-25
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-25
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-26
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-26
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-27
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-27
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-28
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-28
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-29
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-29
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-30
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-30
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-07-31
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-07-31
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-01
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-01
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-02
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-02
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-03
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-03
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-04
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-04
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-05
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-05
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-06
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-06
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-07
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-07
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-08
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-08
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-09
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-09
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-10
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-10
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-11
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-11
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-12
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-12
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-13
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-13
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-14
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-14
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-15
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-15
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-16
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-16
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-17
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-17
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-18
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-18
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-19
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-19
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-20
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-20
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-21
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-21
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-22
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-22
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-23
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-23
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-24
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-24
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-25
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-25
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-26
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-26
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-27
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-27
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-28
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-28
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-29
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-29
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-30
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-30
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-08-31
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-08-31
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-01
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-01
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-02
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-02
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-03
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-03
+[2021-08-25 16:19:18]  [DB]         ReloadContent : 2021-09-04
+[2021-08-25 16:19:18]  [DB]         Content load Fail : 2021-09-04
+[2021-08-25 16:19:20]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:22]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:23]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:24]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:25]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:26]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:27]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:28]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:29]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:30]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:31]  [PCtoKIOSK]  SetMode : preCleaning
+[2021-08-25 16:19:32]  [PCtoKIOSK]  SetMode : restartIN_OPERATION
+[2021-08-25 16:19:32]  [PAGE1]     notice : close
+[2021-08-25 16:19:33]  [OrderManage] clearCart
+[2021-08-25 16:19:43]  [OrderManage] addOrder : 옛날커피(0) 1, 0, 0, 2000
+[2021-08-25 16:19:43]  [OrderManage] addOrder : OK
+[2021-08-25 16:19:46]  [OrderManage] addOrder : 콜드브루 커피(1) 1, 0, 0, 3500
+[2021-08-25 16:19:46]  [OrderManage] addOrder : OK
+[2021-08-25 16:20:22]  [OrderManage] clearCart

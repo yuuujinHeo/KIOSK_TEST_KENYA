@@ -6,6 +6,7 @@
 
 #include "winbase.h"
 #include "bxlconst.h"
+#include "Menu.h"
 
 
 #define BXLPAPI __declspec(dllimport)
@@ -118,6 +119,7 @@ BXLPAPI long __stdcall BidiSetCallBack(fnStatusCallbackFunc pStatusCallbackFn);
 BXLPAPI long __stdcall BidiCancelCallBack();
 
 extern RBLog *rblog;
+extern Menu *menu;
 
 
 
@@ -156,7 +158,7 @@ int RBPrinter::RBOpenPort(QString com){
     LPCWSTR com2 = (const wchar_t*)com.utf16();
     int nRes = PrinterOpenW(nIF, com2, 9600);
     qDebug() << "Printer Open: " << nRes;
-    rblog->AddLogLine("[RBPrinter] Printer Open : " + QString().sprintf("%d",nRes));
+//    rblog->AddLogLine("[RBPrinter] Printer Open : " + QString().sprintf("%d",nRes));
     return nRes;
 }
 
@@ -169,43 +171,17 @@ void RBPrinter::RBCheckStatus(){
     Status = GetPrinterCurrentStatus();
 }
 
-int RBPrinter::RBPrintCheckOut(QString content){
-    if(TransactionStart()!=BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  Print transaction Fail");
-    }
-
-    if(InitializePrinter()!=BXL_SUCCESS){
-
-        rblog->AddLogLine("[RBPrinter]  Print initialize Fail");
-    }
-
-    LineFeed(2);
-    PrintTextW(content.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    CutPaper();
-    PaperEject(BXL_EJT_HOLD);
-    if(TransactionEnd(TRUE, 3000 /* 3 seconds */) != BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter] RBPrintCheckOut Fail: " + content.left(10));
-        // failed to read a response from the printer after sending the print-data.
-//        MessageBox(_T("TransactionEnd failed."), NULL, MB_OK|MB_ICONERROR);
-    }else{
-        rblog->AddLogLine("[RBPrinter] RBPrintCheckOut Success: " + content.left(10));
-        
-    }
-    return 0;
-}
-
-int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list, int price, QString card_comp, QString card_num,
-                              QString approve_num, QString tran_date){
+int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list){
 
     qDebug() << "PrintReceipt";
+
     if(TransactionStart()!=BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  Print transaction Fail");
+        qDebug() << "[RBPrinter]  Print transaction Fail";
     }
 
     if(InitializePrinter()!=BXL_SUCCESS){
 
-        rblog->AddLogLine("[RBPrinter]  Print initialize Fail");
+        qDebug() << "[RBPrinter]  Print initialize Fail";
     }
 
 //        SetCharacterSet(BXL_CS_KS5601);
@@ -216,19 +192,7 @@ int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list, int
     PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD | BXL_FT_UNDERLINE, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
 
 
-    PrintTextW(L"대보디앤에스(주)옥산(하)휴게소\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"[사업자번호] 301-81-23531      \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"[주소] 충청북도 청주시 흥덕구 옥산면 경부고속도로 309  ☎ 043-260-1053\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
     PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-//    PrintTextW(L"대전광역시청 새마을금고\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-//    PrintTextW(L"[사업자번호] 305-82-03140      대표자 : 노용재\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-//    PrintTextW(L"[주소] 35242 대전광역시 서구 둔산로 100(둔산동) ☎ 042-270-2342\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-//    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-
 
     QString mon_sun_format = "ddd";
     QString date_format = "yyyy년 MM월 dd일";
@@ -237,174 +201,31 @@ int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list, int
 
 
     QString date_str = QDateTime::currentDateTime().toString(date_format) + "(" + mon_sun_str + ")";
-    QString time_str = " " + date_str +  " " + QDateTime::currentDateTime().toString(time_format) + "옥산(하) 휴게소 점\n";
+    QString time_str = " " + date_str +  " " + QDateTime::currentDateTime().toString(time_format) + " 레인보우 로보틱스\n";
+
+    qDebug() << "1";
     PrintTextW(time_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
     PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
     // 3 + 4 + 10 + 3
-    PrintTextW(L"        상 품 명                  금  액  \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+    QString temp_str = "상 품 명";
+    PrintTextW(temp_str.toStdWString().data(), BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+    PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+
     PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+
+    qDebug() << "11";
     for(int i=0; i<menu_list.size(); i++){
-        //for(int j=0; j<menu_list[i].quantity; j++){
-        QString menuname = "";
+        QString menu_str = menu_list[i].menu_name;
+        qDebug() << menu_str;
+        PrintTextW(menu_str.toStdWString().data(), BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+        PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
 
-//        menuname+=menu_list[i].menu;
-
-        if(menu_list[i].optionSyrup == 0) menuname+="(시럽없음)";
-        else if(menu_list[i].optionSyrup == 2) menuname+="(시럽보통)";
-        else if(menu_list[i].optionSyrup == 3) menuname+="(시럽많이)";
-
-
-            int menu_length = CountLength(menu_list[i].menu);//menu_list[i].menu.length();
-//            qDebug()<<menu_length;
-            int space_length1 = (26-menu_length)/2;//10-menu_length;
-            int space_length2 = 26-menu_length-space_length1;
-
-            QString detail_str;
-            for(int i=0; i<space_length1; i++){
-                detail_str += " ";
-            }
-            detail_str += menu_list[i].menu;
-
-
-
-            for(int i=0; i<space_length2; i++){
-                detail_str += " ";
-            }
-            for(int i=0; i<9; i++){
-                detail_str += " ";
-            }
-            if(menu_list[i].menu.indexOf("+") != -1){
-                detail_str += " ";
-            }
-            QString price_str;
-            price_str.sprintf("%d", menu_list[i].price);
-            if(menu_list[i].price > 999){
-                int price_length = price_str.length();
-                price_str.insert(price_length-3, ",");
-            }
-            detail_str += price_str + "\n";
-
-
-
-
-            menu_length = CountLength(menuname);
-            space_length1 = (26-menu_length)/2;//10-menu_length;
-            space_length2 = 26-menu_length-space_length1;
-            QString option_str;
-            for(int i=0; i<space_length1; i++){
-                option_str += " ";
-            }
-            option_str+=menuname;
-            for(int i=0; i<space_length2; i++){
-                option_str += " ";
-            }
-            for(int i=0; i<9; i++){
-                option_str += " ";
-            }
-            if(menuname.indexOf("+") != -1){
-                option_str += " ";
-            }
-
-
-            detail_str += option_str + "\n";
-
-
-
-            PrintTextW(detail_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-        //}
     }
     PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
 
-    QString price_str1;
-    QString price_str2;
-    QString price_str3;
-    int price3 = price;
-    int price1 = price*10/11;
-    int price2 = price3-price1;
-    price_str1.sprintf("%d", price1);
-    price_str2.sprintf("%d", price2);
-    price_str3.sprintf("%d", price3);
-    if(price1 > 999){
-        int price_length1 = price_str1.length();
-        price_str1.insert(price_length1-3, ",");
-    }
-    if(price2 > 999){
-        int price_length2 = price_str2.length();
-        price_str2.insert(price_length2-3, ",");
-    }
-    if(price3 > 999){
-        int price_length3 = price_str3.length();
-        price_str3.insert(price_length3-3, ",");
-    }
-    QString price_tot_str1;
-    QString price_tot_str2;
-    QString price_tot_str3;
-
-    price_tot_str1 = "       공급가금액";
-    for(int i=0; i<18; i++){
-        price_tot_str1 += " ";
-    }
-    if(price1 < 999)
-        price_tot_str1 += "  ";
-    price_tot_str1 += price_str1 + "\n";
-
-
-    price_tot_str2 = "       부  가  세";
-    for(int i=0; i<18; i++){
-        price_tot_str2 += " ";
-    }
-    if(price2 < 999)
-        price_tot_str2 += "  ";
-    price_tot_str2 += price_str2 + "\n";
-
-
-    price_tot_str3 = "       합계  금액";
-    for(int i=0; i<18; i++){
-        price_tot_str3 += " ";
-    }
-    if(price3 < 999)
-        price_tot_str3 += "  ";
-    price_tot_str3 += price_str3 + "\n";
-
-    PrintTextW(price_tot_str1.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(price_tot_str2.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(price_tot_str3.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
+    qDebug() << "2";
     PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
 //    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"** 신용카드 결제 **\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-//    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString card_comp_str;
-    card_comp_str = "  카 드 사 명 : ";
-    card_comp_str += card_comp + "\n";
-    PrintTextW(card_comp_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString card_num_str;
-    card_num_str = "  카 드 번 호 : ";
-    card_num_str += card_num + "\n";
-    PrintTextW(card_num_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_date_str;
-    appr_date_str = "  승 인 일 자 : ";
-    appr_date_str += tran_date + "\n";
-    PrintTextW(appr_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString payment_month_str;
-    payment_month_str = "  할 부 기 간 : 일시불\n";
-    PrintTextW(payment_month_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_num_str;
-    appr_num_str = "  승 인 번 호 : ";
-    appr_num_str += approve_num + "\n";
-    PrintTextW(appr_num_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_price_str;
-    appr_price_str = "  승 인 금 액 : ";
-    appr_price_str += price_str3 + "\n";
-    PrintTextW(appr_price_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"================================================\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
 
     QString pin_str = "주문번호 : " + pin;
     PrintTextW(pin_str.toStdWString().data(), BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
@@ -425,20 +246,10 @@ int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list, int
 
     PrintTextW(L"※ 픽업시 영수증의 바코드가 필요하니 영수증을 버리지 않고 꼭 소지해주세요!\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
     PrintTextW(L"※ 오른쪽 주문 완료 현황판에 주문번호 확인 후 바코드 리더기에 영수증의 바코드를 찍으면 음료가 나옵니다.\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"※ 주문 오류 발생 시, 카카오톡채널 @보바로보코리아로 메시지 주시면, 영업시간 이내 확인하여 도와드리도록 하겠습니다.\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
 
     PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
 
 
-    //PrintBarcode((char*)("12345678"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-    //PrintBarcode((char*)("11111111"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-//    PrintBarcode((char*)("197711011"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-//    PrintBarcode((char*)("1977110112"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-//    PrintBarcode((char*)("19771101123"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-//    PrintBarcode((char*)("197711011234"), BXL_BCS_ITF, 100, 2, BXL_ALIGNMENT_CENTER, BXL_BC_TEXT_BELOW);
-
-
 
 //    OpenDrawer(BXL_CASHDRAWER_PIN5);
     CutPaper();
@@ -448,240 +259,15 @@ int RBPrinter::RBPrintReceipt(QString pin, QVector<ST_ORDER_INFO> menu_list, int
     PaperEject(BXL_EJT_HOLD);
 
     if(TransactionEnd(TRUE, 3000 /* 3 seconds */) != BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  RBPrint Fail: " + approve_num);
         // failed to read a response from the printer after sending the print-data.
 //        MessageBox(_T("TransactionEnd failed."), NULL, MB_OK|MB_ICONERROR);
     }else{
-        rblog->AddLogLine("[RBPrinter]  RBPrint Success: " + approve_num);
 
     }
+    qDebug() << "5";
 
     return 0;
 }
-
-int RBPrinter::RBPrintCancelReceipt(int mode,  QVector<ST_ORDER_INFO> menu_list, int price, QString card_comp, QString card_num,
-                              QString approve_num, QString tran_date){
-    if(TransactionStart()!=BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  CancelReceiptPrint transaction Fail");
-    }
-
-    if(InitializePrinter()!=BXL_SUCCESS){
-
-        rblog->AddLogLine("[RBPrinter]  CancelReceiptPrint initialize Fail");
-    }
-
-    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD | BXL_FT_UNDERLINE, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-
-
-    PrintTextW(L"대보디앤에스(주)옥산(하)휴게소\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"[사업자번호] 301-81-23531      \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"[주소] 충청북도 청주시 흥덕구 옥산면 경부고속도로 309  ☎ 043-260-1053\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    if(mode == 0)
-        PrintTextW(L" [재발행 영수증] \n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-    else
-        PrintTextW(L" [환불 영수증] \n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-
-
-    PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    QString mon_sun_format = "ddd";
-    QString date_format = "yyyy년 MM월 dd일";
-    QString time_format = "hh:mm";
-    QString mon_sun_str = QDateTime::currentDateTime().toString(mon_sun_format);
-
-
-    QString date_str = QDateTime::currentDateTime().toString(date_format) + "(" + mon_sun_str + ")";
-    QString time_str = " " + date_str +  " " + QDateTime::currentDateTime().toString(time_format) +"옥산(하) 휴게소 점\n";
-    PrintTextW(time_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    // 3 + 4 + 10 + 3
-    PrintTextW(L"        상 품 명                  금  액  \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    for(int i=0; i<menu_list.size(); i++){
-        //for(int j=0; j<menu_list[i].quantity; j++){
-            int menu_length = CountLength(menu_list[i].menu);//menu_list[i].menu.length();
-//            qDebug()<<menu_length;
-            int space_length1 = (26-menu_length)/2;//10-menu_length;
-            int space_length2 = 26-menu_length-space_length1;
-
-            QString detail_str;
-            for(int i=0; i<space_length1; i++){
-                detail_str += " ";
-            }
-
-            QStringList list = menu_list[i].menu.split("\n");
-            detail_str += list.last();
-            for(int i=0; i<space_length2; i++){
-                detail_str += " ";
-            }
-            for(int i=0; i<9; i++){
-                detail_str += " ";
-            }
-            if(menu_list[i].menu.indexOf("+") != -1){
-                detail_str += " ";
-            }
-            QString price_str;
-
-
-            int pricetot = (mode==0)?menu_list[i].price:-menu_list[i].price;
-            price_str.sprintf("%d", pricetot);
-            if(menu_list[i].price > 999){
-                int price_length = price_str.length();
-                price_str.insert(price_length-3, ",");
-            }
-            detail_str += price_str + "\n";
-            PrintTextW(detail_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-        //}
-    }
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString price_str1;
-    QString price_str2;
-    QString price_str3;
-
-    int price1 = (mode==0)?price*10/11:-price*10/11;
-    int price3 = (mode==0)?price:-price;
-    int price2 = (mode==0)?(price3-price1):-(price3-price1);
-    price_str1.sprintf("%d", price1);
-    price_str2.sprintf("%d", price2);
-    price_str3.sprintf("%d", price3);
-    if(abs(price1) > 999){
-        int price_length1 = price_str1.length();
-        price_str1.insert(price_length1-3, ",");
-    }
-    if(abs(price2) > 999){
-        int price_length2 = price_str2.length();
-        price_str2.insert(price_length2-3, ",");
-    }
-    if(abs(price3) > 999){
-        int price_length3 = price_str3.length();
-        price_str3.insert(price_length3-3, ",");
-    }
-    QString price_tot_str1;
-    QString price_tot_str2;
-    QString price_tot_str3;
-
-    price_tot_str1 = "       공급가금액";
-    for(int i=0; i<18; i++){
-        price_tot_str1 += " ";
-    }
-    if(price1 < 999)
-        price_tot_str1 += "  ";
-    price_tot_str1 += price_str1 + "\n";
-
-
-    price_tot_str2 = "       부  가  세";
-    for(int i=0; i<18; i++){
-        price_tot_str2 += " ";
-    }
-    if(price2 < 999)
-        price_tot_str2 += "  ";
-    price_tot_str2 += price_str2 + "\n";
-
-
-    price_tot_str3 = "       합계  금액";
-    for(int i=0; i<18; i++){
-        price_tot_str3 += " ";
-    }
-    if(price3 < 999)
-        price_tot_str3 += "  ";
-    price_tot_str3 += price_str3 + "\n";
-
-    PrintTextW(price_tot_str1.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(price_tot_str2.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(price_tot_str3.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-//    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    if(mode == 0)
-        PrintTextW(L"** 신용카드 결제 **\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    else
-        PrintTextW(L"** 신용카드 결제 취소 **\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-//    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT | BXL_FT_UNDERLINE, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString card_comp_str;
-    card_comp_str = "  카 드 사 명 : ";
-    card_comp_str += card_comp + "\n";
-    PrintTextW(card_comp_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString card_num_str;
-    card_num_str = "  카 드 번 호 : ";
-    card_num_str += card_num + "\n";
-    PrintTextW(card_num_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_date_str;
-    appr_date_str = "  승 인 일 자 : ";
-    appr_date_str += tran_date + "\n";
-    PrintTextW(appr_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString payment_month_str;
-    payment_month_str = "  할 부 기 간 : 일시불\n";
-    PrintTextW(payment_month_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_num_str;
-    appr_num_str = "  승 인 번 호 : ";
-    appr_num_str += approve_num + "\n";
-    PrintTextW(appr_num_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString appr_price_str;
-    appr_price_str = "  승 인 금 액 : ";
-    appr_price_str += price_str3 + "\n";
-    PrintTextW(appr_price_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"================================================\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    if(mode == 0){
-        QString pin_str = "주문번호 : " + approve_num.right(5);
-        PrintTextW(pin_str.toStdWString().data(), BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-        PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-        char barcode_char[20];
-        sprintf(barcode_char, "a%sz\0", approve_num.right(5).toStdString().data());
-
-        PrintQRCode(barcode_char, BXL_QRCODE_MODEL1,100,BXL_QRCODE_ECC_LEVEL_M,BXL_ALIGNMENT_CENTER);
-
-        PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-        PrintTextW(L"※ 픽업시 영수증의 바코드가 필요하니 영수증을 버리지 않고 꼭 소지해주세요!\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-        PrintTextW(L"※ 오른쪽 주문 완료 현황판에 주문번호 확인 후 바코드 리더기에 영수증의 바코드를 찍으면 음료가 나옵니다.\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-        PrintTextW(L"※ 주문 오류 발생 시, 카카오톡채널 @보바로보코리아로 메시지 주시면, 영업시간 이내 확인하여 도와드리도록 하겠습니다.\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-        PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    }else{
-        PrintTextW(L"\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    }
-
-
-
-
-
-//    OpenDrawer(BXL_CASHDRAWER_PIN5);
-    CutPaper();
-
-//    LineFeed(2);
-
-    PaperEject(BXL_EJT_HOLD);
-
-    if(TransactionEnd(TRUE, 3000 /* 3 seconds */) != BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter] RBPrintCancel Fail : " + approve_num);
-        // failed to read a response from the printer after sending the print-data.
-//        MessageBox(_T("TransactionEnd failed."), NULL, MB_OK|MB_ICONERROR);
-    }else{
-        rblog->AddLogLine("[RBPrinter] RBPrintCancel Success : " + approve_num);
-
-    }
-
-
-    return 0;
-}
-
 
 int RBPrinter::RBPrintText(){
 
@@ -728,342 +314,4 @@ int RBPrinter::RBPrintText(){
     }
 
     return 1;
-}
-
-int RBPrinter::RBPrintDayReport(SaleReport _report){
-
-    // Enters 'Transaction' mode.
-    if(TransactionStart()!=BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  Print transaction Fail");
-    }
-
-    if(InitializePrinter()!=BXL_SUCCESS){
-
-        rblog->AddLogLine("[RBPrinter]  Print initialize Fail");
-    }
-
-    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD | BXL_FT_UNDERLINE, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-
-    PrintTextW(L" *** 영업 일보 *** \n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-    PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"사업자No : 301-81-23531\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"사업장명 : 옥산(하)휴게소\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"매장명   : 옥하 보바로보 <0001-0081>\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString sale_date_str = "영업일자 : ";
-    QString print_date_str = "인쇄일자 : ";
-
-    sale_date_str += _report.Day.toString("yyyy년 MM월 dd일") + "\n";
-    print_date_str += QDateTime().currentDateTime().toString("yyyy년 MM년 dd일 HH:mm:ss") + "\n";
-
-    PrintTextW(sale_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(print_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    QString temp_line;
-    QString temp_price;
-    int price;
-
-    price = _report.total_sale_amt+_report.refund_sale_amt;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "총판매액 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    price = _report.refund_sale_amt;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "반품판매 :              -" + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    price = _report.total_sale_amt;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "실매출액 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    price = _report.total_sale_amt;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "카드매출 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    price = 0;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "현금매출 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    price = _report.total_sale_cnt;
-    temp_price.sprintf("%d",price);
-    temp_line = "객    수 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    if(_report.total_sale_amt == 0){
-        price = 0;
-    }else{
-        price = _report.total_sale_amt/_report.total_sale_cnt;
-    }
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "객 단 가 :              " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"      상 품 명         수  량         금  액  \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    int total_sale_num = 0;
-    int total_sale_price = 0;
-    for(int i=0; i<_report.Menu.size(); i++){
-        int menu_length = CountLength(_report.Menu[i].menu_name);
-        int space_length1 = (22-menu_length)/2;
-        int space_length2 = 22-menu_length-space_length1;
-
-        QString detail_str;
-        for(int i=0; i<space_length1; i++){
-            detail_str += " ";
-        }
-
-        detail_str += _report.Menu[i].menu_name;
-
-        for(int i=0; i<space_length2; i++){
-            detail_str += " ";
-        }
-
-        QString num_str;
-        num_str.sprintf("(%d건)",_report.Menu[i].num);
-        total_sale_num += _report.Menu[i].num;
-
-        menu_length = CountLength(num_str);
-        space_length1 = (11-menu_length)/2;
-        space_length2 = 11-menu_length-space_length1;
-
-        for(int i=0; i<space_length1; i++){
-            detail_str += " ";
-        }
-
-        detail_str += num_str;
-
-        for(int i=0; i<space_length2; i++){
-            detail_str += " ";
-        }
-
-        for(int i=0; i<9; i++){
-            detail_str += " ";
-        }
-        QString price_str;
-        int pricetot = _report.Menu[i].amt;
-        price_str.sprintf("%d", pricetot);
-        total_sale_price += pricetot;
-        if(pricetot > 999){
-            int price_length = price_str.length();
-            price_str.insert(price_length-3, ",");
-        }
-        detail_str += price_str + "\n";
-        PrintTextW(detail_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    }
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    int menu_length = CountLength("총 합계");
-    int space_length1 = (22-menu_length)/2;
-    int space_length2 = 22-menu_length-space_length1;
-
-    QString detail_str;
-    for(int i=0; i<space_length1; i++){
-        detail_str += " ";
-    }
-
-    detail_str += "총 합계";
-
-    for(int i=0; i<space_length2; i++){
-        detail_str += " ";
-    }
-
-    QString num_str;
-    num_str.sprintf("(%d건)",total_sale_num);
-
-    menu_length = CountLength(num_str);
-    space_length1 = (11-menu_length)/2;
-    space_length2 = 11-menu_length-space_length1;
-
-    for(int i=0; i<space_length1; i++){
-        detail_str += " ";
-    }
-
-    detail_str += num_str;
-
-    for(int i=0; i<space_length2; i++){
-        detail_str += " ";
-    }
-
-    for(int i=0; i<9; i++){
-        detail_str += " ";
-    }
-    QString price_str;
-    int pricetot = total_sale_price;
-    price_str.sprintf("%d", pricetot);
-    if(pricetot > 999){
-        int price_length = price_str.length();
-        price_str.insert(price_length-3, ",");
-    }
-    detail_str += price_str + "\n";
-    PrintTextW(detail_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    CutPaper();
-
-    PaperEject(BXL_EJT_HOLD);
-
-    if(TransactionEnd(TRUE, 3000 /* 3 seconds */) != BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  RBPrintDayReport Fail");
-    }else{
-        rblog->AddLogLine("[RBPrinter]  RBPrintDayReport Success");
-    }
-
-    return 0;
-}
-
-int RBPrinter::RBPrintCardReport(SaleReport _report){
-
-    // Enters 'Transaction' mode.
-    if(TransactionStart()!=BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  Print transaction Fail");
-    }
-
-    if(InitializePrinter()!=BXL_SUCCESS){
-
-        rblog->AddLogLine("[RBPrinter]  Print initialize Fail");
-    }
-
-    PrintTextW(L"\n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT |BXL_FT_BOLD | BXL_FT_UNDERLINE, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-
-    PrintTextW(L" * 매입사별 매출현황 * \n", BXL_ALIGNMENT_CENTER, BXL_FT_DEFAULT, BXL_TS_1WIDTH | BXL_TS_1HEIGHT);
-    PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"사업자No : 301-81-23531\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"사업장명 : 옥산(하)휴게소\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"매장명   : 옥하 보바로보 <0001-0081>\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    QString sale_date_str = "영업일자 : ";
-    QString print_date_str = "인쇄일자 : ";
-
-    sale_date_str += _report.Day.toString("yyyy년 MM월 dd일") + "\n";
-    print_date_str += QDateTime().currentDateTime().toString("yyyy년 MM년 dd일 HH:mm:ss") + "\n";
-
-    PrintTextW(sale_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(print_date_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    PrintTextW(L"\n\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"   매입사명       구분(건수)      승인금액    \n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    for(int i=0; i<_report.Card.size(); i++){
-        int menu_length = CountLength(_report.Card[i].card_name);
-        int space_length1 = (20-menu_length)/2;
-        int space_length2 = 20-menu_length-space_length1;
-
-        QString detail_str;
-        for(int i=0; i<space_length1; i++){
-            detail_str += " ";
-        }
-
-        detail_str += _report.Card[i].card_name;
-
-        for(int i=0; i<space_length2; i++){
-            detail_str += " ";
-        }
-
-        QString num_str;
-        QString temp_str;
-        temp_str.sprintf("(%d건)",_report.Card[i].num);
-        num_str = _report.Card[i].sale_gb + temp_str;
-
-        menu_length = CountLength(num_str);
-        space_length1 = (10-menu_length)/2;
-        space_length2 = 10-menu_length-space_length1;
-
-        for(int i=0; i<space_length1; i++){
-            detail_str += " ";
-        }
-
-        detail_str += num_str;
-
-        for(int i=0; i<space_length2; i++){
-            detail_str += " ";
-        }
-
-        for(int i=0; i<9; i++){
-            detail_str += " ";
-        }
-        QString price_str;
-        int pricetot = _report.Card[i].amt;
-        price_str.sprintf("%d", pricetot);
-        if(pricetot > 999){
-            int price_length = price_str.length();
-            price_str.insert(price_length-3, ",");
-        }
-        if(_report.Card[i].sale_gb == "취소"){
-            detail_str += "-" + price_str + "\n";
-        }else{
-            detail_str += price_str + "\n";
-        }
-        PrintTextW(detail_str.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-    }
-    PrintTextW(L"------------------------------------------------\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    QString temp_line;
-    QString temp_price;
-    int price;
-
-    price = _report.total_sale_amt;
-    temp_price.sprintf("%d",price);
-    if(price > 999){
-        temp_price.insert(temp_price.length()-3,",");
-    }
-    temp_line = "            합계 :           " + temp_price + "\n";
-    PrintTextW(temp_line.toStdWString().data(), BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-
-    PrintTextW(L"================================================\n", BXL_ALIGNMENT_LEFT, BXL_FT_DEFAULT, BXL_TS_0WIDTH | BXL_TS_0HEIGHT);
-
-    CutPaper();
-
-    PaperEject(BXL_EJT_HOLD);
-
-    if(TransactionEnd(TRUE, 3000 /* 3 seconds */) != BXL_SUCCESS){
-        rblog->AddLogLine("[RBPrinter]  RBPrintCardReport Fail");
-    }else{
-
-        rblog->AddLogLine("[RBPrinter]  RBPrintCardReport Success");
-    }
-
-    return 0;
 }

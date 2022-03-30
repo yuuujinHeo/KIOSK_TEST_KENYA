@@ -1,0 +1,21 @@
+[2021-09-15 00:00:00]  [BACKEND]    CreateDB : 210915
+[2021-09-15 00:00:00]  [DB]         CreateDB : CREATE TABLE RB2021_09_15 (order_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, time TEXT, menu TEXT, price INT, cardcomp TEXT, cardnum TEXT, appnum TEXT, trandate TEXT, iscancel TEXT, acqu_code TEXT, card_gb TEXT, version INT)
+[2021-09-15 00:00:00]  [BACKEND]    reloadSaleData
+[2021-09-15 00:00:00]  [DB]         ReloadDate 
+[2021-09-15 00:00:00]  [BACKEND]    reloadContent : 20210915
+[2021-09-15 00:00:00]  [DB]         ReloadContent : 2021-09-15
+[2021-09-15 00:00:00]  [DB]         Content load Fail : 2021-09-15
+[2021-09-15 12:22:51]  [OrderManage] clearCart
+[2021-09-15 12:23:01]  [OrderManage] clearCart
+[2021-09-15 12:23:06]  [OrderManage] addOrder : 블랙밀크티(0) 1, 0, 0, 3800
+[2021-09-15 12:23:06]  [OrderManage] addOrder : OK
+[2021-09-15 12:23:15]  [OrderManage] clearCart
+[2021-09-15 12:23:16]  [OrderManage] addOrder : 옛날 커피(0) 1, 0, 0, 2000
+[2021-09-15 12:23:16]  [OrderManage] addOrder : OK
+[2021-09-15 12:23:20]  [OrderManage] addOrder : 블랙밀크티(1) 1, 0, 0, 3800
+[2021-09-15 12:23:20]  [OrderManage] addOrder : OK
+[2021-09-15 12:23:26]  [OrderManage] removeOrder : 0
+[2021-09-15 12:23:27]  [OrderManage] removeOrder : 0
+[2021-09-15 12:23:43]  [OrderManage] clearCart
+[2021-09-15 12:24:05]  [OrderManage] addOrder : 블랙티(0) 1, 0, 1, 2800
+[2021-09-15 12:24:05]  [OrderManage] addOrder : OK

@@ -17,18 +17,17 @@ public:
     explicit OrderManage(QObject *parent = nullptr);
 
 
-    Q_INVOKABLE int addOrderToCart(QString menu, int optIce, int optBoba, int optSyrup, int price);
+    Q_INVOKABLE int addOrderToCart(QString menu_id, QString menu_name);
     Q_INVOKABLE int removeOrderFromCart(int num);
     Q_INVOKABLE void clearCart();
 
     Q_INVOKABLE int getCartMaxItemSize();
     Q_INVOKABLE int getCartItemSize();
     Q_INVOKABLE QString getCartItemMenu(int num);
-    Q_INVOKABLE QString getCartItemOptionString(int num);
+    Q_INVOKABLE QString getCartItemName(int num);
 
     Q_INVOKABLE QString getCartItemImageSrc(int num);
 
-    Q_INVOKABLE int getTotalPrice();
     Q_INVOKABLE bool hasAnyOrder();
 };
 

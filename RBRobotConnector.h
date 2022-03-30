@@ -1,8 +1,10 @@
-#ifndef RBROBOTCONNECTOR_H
-#define RBROBOTCONNECTOR_H
+#ifndef KIOSKHANDLER_H
+#define KIOSKHANDLER_H
 
 #include <QObject>
+#include <QtNetwork>
 #include <QTimer>
+#include <QDebug>
 
 // json -----------------------
 #include <QJsonDocument>
@@ -10,112 +12,47 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
+// connection ------------------
+#include <QEventLoop>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QUrl>
+#include <QNetworkRequest>
+
 // websocket ------------------
 #include <QtHttpServer.h>
 #include <QtHttpRequest.h>
 #include <QtHttpReply.h>
 #include <QtHttpHeader.h>
+#include "globalheader.h"
+#define KIOSK_URL   "http://127.0.0.1:8080"
+//#define ROBOT_URL   "http://127.0.0.1:8080"
+#define ROBOT_URL   "http://192.168.100.100:8080"
 
-#include "GlobalHeader.h"
-
-enum{RBLAN_SUCCESS = 0, RBLAN_FAIL};
-enum{RBLAN_CS_CONNECTED = 0, RBLAN_CS_DISCONNECTED};
-
-
-
-enum{
-    ACTION_STATE_IDLE = 0,
-    ACTION_STATE_GET_CUP,
-    ACTION_STATE_GET_DRINK,
-    ACTION_STATE_GET_WATER,
-    ACTION_STATE_GO_OUTLET,
-    ACTION_NUM
-};
-const QString ACTION_STATE_NAME[ACTION_NUM] = {
-    "IDLE",
-    "GET_CUP",
-    "GET_DRINK",
-    "GET_WATER",
-    "GO_OUTLET"
-};
-
-enum{
-    ED_STATE_IDLE = 0,
-    ED_STATE_ON_PREPARING,
-    ED_STATE_ON_WAITING,
-    ED_STATE_ON_RETURNING,
-    ED_NUM
-};
-const QString ED_STATE_NAME[ED_NUM] = {
-    "IDLE",
-    "ON_PREPARING",
-    "ON_WAITING",
-    "ON_RETURNING"
-};
-
-enum{
-    BOBA_STATE_IDLE = 0,
-    BOBA_STATE_MAINTENANCE,
-    BOBA_STATE_CLEANING,
-    BOBA_STATE_FULL,
-    BOBA_STATE_RESTART,
-    BOBA_STATE_PREPARING_CLEANING,
-    BOBA_STATE_PREPARING_OPERATION,
-    BOBA_STATE_DISCONNECTED
-};
-
-
-class RBTCPServer;
-
-class RBRobotConnector : QObject
+class KioskHandler : QObject
 {
     Q_OBJECT
+
 public:
-    RBRobotConnector();
+    KioskHandler();
+    QByteArray generalPost(QByteArray post_data, QString url);
 
-    bool is_connected;
+    void process_order(QString url);
+    void send_order(QString url, ST_ORDER_SET order);
+    void test_order(QString url, int menu_id);
 
-    //int ROBOT_STATE;
-    int ACTION_STATE;
-    int ED_STATE;
-
-    int fixxingOnFlag;
-    int fixxingOffFlag;
-    int State_Boba = BOBA_STATE_IDLE;
-    QString Platform_state;
-
-    bool is_printer_error;
-
-    void generalReply(QtHttpReply *reply, QByteArray post_data);
-
-    void replyRequestOrder(QtHttpReply *reply);
-    void replyDeleteOrder(QtHttpReply *reply, QJsonObject json);
-    void replyRequestError(QtHttpReply *reply);
-    void replySetState(QtHttpReply *reply);
-    void setState(QJsonObject json);
-
-
-    QVector<ST_ORDER_SET> orders;
-
-    QMap<QString, bool> soldout_map;
-
+    QJsonObject json_out;
+    QJsonObject json_in;
 
 public slots:
     void onCheck();
-    void onRequestReply(QtHttpRequest *request, QtHttpReply *reply);
-
 
 private:
     QTimer *checkTimer;
+    // 네트워크 커넥션 관리 -----------------
+    QNetworkAccessManager   *manager;
+    QEventLoop              connection_loop;
 
-    QtHttpServer    *server;
-
-    int connection_count;
 };
 
-
-
-
-
-
-#endif // RBROBOTCONNECTOR_H
+#endif // KIOSKHANDLER_H

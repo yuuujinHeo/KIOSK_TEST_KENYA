@@ -1,14 +1,15 @@
 #include "Menu.h"
 #include <iostream>
 
-QVector<ST_MENU_TYPE> menuTypeList;
-QVector<MENU_DETAILS> menuList;
-QMap<QString, QString> mapMenuImage;
-QMap<QString, QString> mapMixxImage;
-QMap<QString, QString> mapMenuEng;
+//QVector<MENU_DETAILS> menuList;
+//QMap<QString, QString> mapMenuImage;
+//QMap<QString, QString> mapMixxImage;
+//QMap<QString, QString> mapMenuEng;
+//QMap<QString, QString> mapMenuID;
 
 extern RBLog *rblog;
-Menu::Menu()
+Menu::Menu(QObject *parent)
+    : QObject(parent)
 {
     std::cout << "MENU" << std::endl;
     LoadMenu();
@@ -16,74 +17,116 @@ Menu::Menu()
 
 
 void Menu::LoadMenu(){
-    menuTypeList.clear();
-    menuList.clear();
+    menu_List.clear();
 
     menuDB = QSqlDatabase::addDatabase("QSQLITE", "LocalDB");
     menuDB.setDatabaseName(MENU_DB_PATH);
 
     if(!menuDB.open()){
         qDebug() << "Menu Database open fail";
-        rblog->AddLogLine("[Menu]       menuDBopen : fail");
-
     }
 
-    QString select_str("select * from TypeList");
+    QString select_str("select * from MenuList");
     QSqlQuery query(menuDB);
     query.exec(select_str);
     while(query.next()){
-        ST_MENU_TYPE temp_type;
-        temp_type.kor = query.value(1).toString();
-        temp_type.eng = query.value(2).toString();
-        menuTypeList.push_back(temp_type);
-        MENU_DETAILS tempDetail;
-        menuList.push_back(tempDetail);
+        ST_MENU_DETAIL temp_menu;
+
+        temp_menu.menu_id = query.value(0).toString();
+        temp_menu.menu_type = query.value(1).toString();
+        temp_menu.menu_name = query.value(2).toString();
+        temp_menu.image = query.value(3).toString();
+
+        menu_List[temp_menu.menu_type].push_back(temp_menu);
     }
 
-    QString select_str2("select * from MenuList");
-    query.exec(select_str2);
-    while(query.next()){
-        QString type = query.value(2).toString();
-        int type_index = -1;
-        for(int i=0; i<menuTypeList.size(); i++){
-            if(menuTypeList[i].kor == type){
-                type_index = i;
-                break;
+    QList<QString> key_list = menu_List.keys();
+    for(int i=0; i<key_list.size(); i++){
+        qDebug() << key_list[i] << "=====================";
+
+        for(int j=0; j<menu_List[key_list[i]].size(); j++){
+            qDebug() << menu_List[key_list[i]][j].menu_id << " : " << menu_List[key_list[i]][j].menu_name;
+        }
+    }
+
+
+    qDebug() << menu_List["커피"].size();
+}
+
+QString Menu::getMenuName(QString menu_id){
+    QList<QString> key_list = menu_List.keys();
+    for(int i=0; i<key_list.size(); i++){
+        for(int j=0; j<menu_List[key_list[i]].size(); j++){
+            if(menu_List[key_list[i]][j].menu_id == menu_id){
+                qDebug() << "getName " << menu_id << menu_List[key_list[i]][j].menu_name;
+                return menu_List[key_list[i]][j].menu_name;
             }
         }
-        if(type_index < 0){
-            qDebug() << "Menu Database menu type error -- " << type;
-            break;
-        }
+    }
+    qDebug() << "getName " << menu_id;
+    return "";
+}
 
-        ST_MENU_DETAIL menu;
-        menu.code = query.value(0).toString();
-        menu.kor = query.value(3).toString();
-        menu.eng = query.value(4).toString();
-        menu.price = query.value(5).toInt();
-        menu.image = query.value(6).toString();
-        menu.description = query.value(7).toString().replace("\\n", "\n");
-        menuList[type_index].push_back(menu);
-
-        mapMenuImage[menu.kor] = menu.image;
-        mapMenuEng[menu.kor] = menu.eng;
-
-        QString mixx_image = query.value(7).toString();
-        if(mixx_image != ""){
-            mapMixxImage[menu.kor] = mixx_image;
+QString Menu::getMenuImage(QString menu_id){
+    QList<QString> key_list = menu_List.keys();
+    for(int i=0; i<key_list.size(); i++){
+        for(int j=0; j<menu_List[key_list[i]].size(); j++){
+            if(menu_List[key_list[i]][j].menu_id == menu_id){
+                return menu_List[key_list[i]][j].image;
+            }
         }
     }
-
-    for(int i=0; i<menuTypeList.size(); i++){
-        qDebug() << menuTypeList[i].kor << ", " << menuTypeList[i].eng;
-    }
-
-    for(int i=0; i<menuList.size(); i++){
-        for(int j=0; j<menuList[i].size(); j++){
-            qDebug() << menuList[i][j].kor << ", " << menuList[i][j].eng << ", " << menuList[i][j].price;
+    return "";
+}
+QString Menu::getMenuImagename(QString menu_name){
+    QList<QString> key_list = menu_List.keys();
+    for(int i=0; i<key_list.size(); i++){
+        for(int j=0; j<menu_List[key_list[i]].size(); j++){
+            if(menu_List[key_list[i]][j].menu_name == menu_name){
+                qDebug() << menu_List[key_list[i]][j].image;
+                return menu_List[key_list[i]][j].image;
+            }
         }
     }
-    rblog->AddLogLine("[Menu]       menuDBopen : menuTypeList "+QString().sprintf("%d",menuTypeList.size()));
-    rblog->AddLogLine("[Menu]       menuDBopen : menuList "+QString().sprintf("%d",menuList.size()));
+    return "";
+}
 
+QString Menu::getMenuID(QString menu_name){
+    QList<QString> key_list = menu_List.keys();
+    for(int i=0; i<key_list.size(); i++){
+        for(int j=0; j<menu_List[key_list[i]].size(); j++){
+            if(menu_List[key_list[i]][j].menu_name == menu_name){
+                qDebug() << menu_List[key_list[i]][j].menu_id;
+                return menu_List[key_list[i]][j].menu_id;
+            }
+        }
+    }
+    return "";
+}
+QString Menu::getMenuName(QString type, int num){
+    qDebug() << type << num;
+    qDebug() << menu_List[type].size();
+    qDebug() << menu_List.size();
+    if(menu_List[type].size() > num){
+        qDebug() <<menu_List[type][num].menu_name;
+        return menu_List[type][num].menu_name;
+    }
+
+    return "";
+}
+
+QString Menu::getMenuImage(QString type, int num){
+    qDebug() << type << num;
+    qDebug() <<menu_List[type].size();
+    qDebug() << menu_List.size();
+    if(menu_List[type].size() > num){
+        qDebug() <<menu_List[type][num].image;
+        return menu_List[type][num].image;
+    }
+
+    return "";
+}
+
+int Menu::getMenuNum(QString type){
+    return menu_List[type].size();
 }

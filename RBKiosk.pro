@@ -4,7 +4,7 @@ CONFIG += resources_big
 #CONFIG += console
 
 
-#QMAKE_CXXFLAGS += /utf-8
+QMAKE_CXXFLAGS += /utf-8
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -24,13 +24,13 @@ DEFINES += _MBCS
 
 INCLUDEPATH += websocket
 
+
 SOURCES += \
     Menu.cpp \
     OrderManage.cpp \
     RBLog.cpp \
     RBRobotConnector.cpp \
-    RBSaleLog.cpp \
-    main.cpp \
+        main.cpp \
     Backend.cpp \
     RBPrinter.cpp \
     websocket/QtHttpClientWrapper.cpp \
@@ -70,13 +70,12 @@ HEADERS += \
     RBLog.h \
     RBPrinter.h \
     RBRobotConnector.h \
-    RBSaleLog.h \
     bxlconst.h \
     websocket/QtHttpClientWrapper.h \
     websocket/QtHttpHeader.h \
     websocket/QtHttpReply.h \
     websocket/QtHttpRequest.h \
-    websocket/vg.h \
+    websocket/QtHttpServer.h \
 
 #LIBS += -L$$PWD/ -lBXLPAPI
 #LIBS += -L$$PWD/ -lREXOD_LIB
@@ -85,11 +84,8 @@ HEADERS += \
 
 #SMTP_LIBRARY_LOCATION = $$PWD/lib/
 
-INCLUDEPATH += $$PWD/./
-DEPENDPATH += $$PWD/./
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
 
-#LIBS += -L$$PWD/ -lBXLPAPI
-#LIBS += -lUser32
-
-LIBS += -L$$PWD/./ -lBXLPAPI_x64
-
+LIBS += -L$$PWD/./ -lBXLPAPI
+LIBS += -lUser32

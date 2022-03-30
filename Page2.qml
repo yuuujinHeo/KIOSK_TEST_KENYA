@@ -20,25 +20,25 @@ Page {
 
 
     function checkSoldout(){
-        pageMilkTea.checkSoldout();
-        pageTea.checkSoldout();
+
     }
 
     function cartReload(){
-        if(orderManage.hasAnyOrder()){
-            circleCart.visible = true;
-            textCartItemNum.text = orderManage.getCartItemSize();
-        }else{
-            circleCart.visible = false;
-            textCartItemNum.text = orderManage.getCartItemSize();
-        }
+        pageCart.reloadCart()
+        //        if(orderManage.hasAnyOrder()){
+        //            circleCart.visible = true;
+        //            textCartItemNum.text = orderManage.getCartItemSize();
+        //        }else{
+        //            circleCart.visible = false;
+        //            textCartItemNum.text = orderManage.getCartItemSize();
+        //        }
     }
 
 
 
     // 메뉴창의 음료 그림 선택시 시그널
-    signal sigItem(string menuKor, string menuEng, string imageSrc, int price, int type)
-
+    signal sigItem(string menuKor, string menuEng, string description, string imageSrc, int price, int type)
+    signal deleteItem(string menu_name)
 
 
 
@@ -49,186 +49,217 @@ Page {
         onSigItem:{
             // 장바구니가 가득 차있으면 Warning 메시지
             // 장바구니가 비어있으면 옵션 선택 팝업
-            if(orderManage.getCartItemSize() >= orderManage.getCartMaxItemSize()){
-                warningPopup.closeTimeout = 6
-                warningPopup.setType(2)
-                warningPopup.open();
-            }else{
-                optionPage.setDrink(menuKor, menuEng, imageSrc, price, type);
-                swipeView.currentIndex = 2;
-            }
+
+            console.log(menuKor)
+            orderManage.addOrderToCart(menu.getMenuID(menuKor), menuKor)
+//            swipeView.currentIndex = 3  // cart page
+            clickSound.play()
+
+
+            //                optionPage.setDrink(menuKor, menuEng, description, imageSrc, price, type);
+            //                swipeView.currentIndex = 2;
+
+        }
+        onDeleteItem:{
+
         }
     }
 
 
 
     // Background -------------------------------------
-    Rectangle{
+    Image{
         id: rectBackground
         x: 0
         y: 0
         width: parent.width
         height: parent.height
-        color: "#f3f3f3"
+        source: "file:C:/Users/POS/Desktop/BobaMenuImage/background_order.png"
+//        source: "image/background_order.png"
+        fillMode: Image.Stretch
 
 
-        Text {
-            id: textGoToFront
+        Rectangle {
+            id: btn_coffee
+            x: 69
+            y: 215
+            width: 145
+            height: 77
+            color: "#E7E6E6"
+            Text {
+                color: "#141414"
+                text: "COFFEE"
+                anchors.fill: parent
+                font.family: fontBold.name
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 30
+            }
+
+            MouseArea {
+                id: mouseArea
+                anchors.fill: parent
+                onReleased:{
+                    menuSwipeView.currentIndex=0
+                }
+            }
+        }
+
+
+
+        Rectangle {
+            id: btn_tea
+            x: 230
+            y: 215
+            width: 144
+            height: 77
+            color: "#E7E6E6"
+            Text {
+                color: "#141414"
+                text: "TEA"
+                anchors.fill: parent
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 30
+                font.family: fontBold.name
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            MouseArea {
+                id: mouseArea1
+                anchors.fill: parent
+                onReleased:{
+                    menuSwipeView.currentIndex=1
+                }
+            }
+        }
+
+        CartPage{
+            id: pageCart
+            y: 1621
+            height: 299
+            anchors.right: parent.right
+            anchors.rightMargin: 8
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+//            anchors.fill: parent
+        }
+
+//        ScrollView {
+//            id: cartView
+//            y: 1621
+//            height: 299
+//            anchors.right: parent.right
+//            anchors.rightMargin: 8
+//            anchors.left: parent.left
+//            anchors.leftMargin: 0
+//            clip: true
+
+//            ScrollBar.horizontal: ScrollBar{
+//                width: 1033
+//                height: 20
+
+//                policy:ScrollBar.AlwaysOn
+//            }
+
+//            CartPage{
+//                id: pageCart
+//                anchors.fill: parent
+//            }
+
+//            //            Rectangle{
+//            //                anchors.fill: parent
+//            //                color: "#222222"
+//            //            }
+//        }
+
+        Item{
+            x: 86
+            y: 324
+            width: 900
+            height: 888
+
+            SwipeView {
+                id: menuSwipeView
+                anchors.fill:parent
+                clip: true
+                interactive: true
+                currentIndex: 0
+
+                MenuPage_Coffee {
+                    id: pageCoffee
+                    //1200
+                }
+
+                MenuPage_Tea {
+                    id: pageTea
+                }
+            }
+        }
+
+
+
+        MouseArea {
             x: 34
             y: 24
-            width: 178
-            height: 86
-            text: qsTr("뒤로가기")
-            font.family: fontBold.name
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pixelSize: 40
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    swipeView.currentIndex = 0
-                }
+            anchors.leftMargin: 18
+            anchors.topMargin: 21
+            anchors.rightMargin: 928
+            anchors.bottomMargin: 1778
+            anchors.fill: parent
+            onClicked: {
+                swipeView.currentIndex = 0
             }
         }
 
-        Image {
-            id: imageLogo
-            x: 446
-            y: 92
-            width: 188
-            height: 221
-            source: "image/order_page/logo_boba.png"
-            fillMode: Image.PreserveAspectFit
+        MouseArea {
+            x: 118
+            y: 807
+            anchors.rightMargin: 31
+            anchors.bottomMargin: 296
+            anchors.leftMargin: 752
+            anchors.topMargin: 1485
+            anchors.fill: parent
+            onReleased: {
+                if(!mCartClicked){
+//                    rectCart.opacity = 1.0
+                    mCartClicked = true;
+                    if(orderManage.hasAnyOrder() === true){
+                        swipeView.currentIndex = 0;
+                        backend.newOrder() // 결제진행
+                    }else{
+                    }
+                    clickSound.play()
+                }
+            }
+            onPressed:{
+                if(mCartClicked){
+//                    rectCart.opacity = 0.7
+                    mCartClicked = false;
+                }
+            }
         }
 
         Rectangle {
-            x: 83
-            y: 368
-            width: 914
+            id: btn_icecream
+            x: 389
+            y: 215
+            width: 176
             height: 77
-            color: "#201547"
+            color: "#E7E6E6"
             Text {
+                color: "#141414"
+                text: "ICECREAM"
                 anchors.fill: parent
-                color: "#ffffff"
-                text: "티 & 커피"
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 30
                 font.family: fontBold.name
                 horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 40
             }
-        }
-        Rectangle {
-            x: 83
-            y: 941
-            width: 914
-            height: 77
-            color: "#201547"
-
-            Text {
-                id: textMenuTea
-                anchors.fill: parent
-                color: "#ffffff"
-                text: "보바 밀크티 & 밀크커피"
-                font.family: fontBold.name
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 40
-            }
-        }
-
-
-
-        Rectangle{
-            id: rectCart
-            x: 0
-            y: 1686
-            width: parent.width
-            height: 234
-            color: "#2b214e"
-
-
-
-            Text {
-                anchors.fill: parent
-                color: "#ffffff"
-                text: "장바구니"
-                font.pixelSize: 80
-                font.family: fontBold.name
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-            }
-
 
             MouseArea {
+                id: mouseArea2
                 anchors.fill: parent
-                onReleased: {
-                    if(!mCartClicked){
-                        rectCart.opacity = 1.0
-                        mCartClicked = true;
-                        if(orderManage.hasAnyOrder() === true){
-                            swipeView.currentIndex = 3  // cart page
-                        }else{
-                            warningPopup.closeTimeout = 6
-                            warningPopup.setType(1)
-                            warningPopup.open()
-                        }
-
-
-                        clickSound.play()
-                    }
-                }
-                onPressed:{
-                    if(mCartClicked){
-                        rectCart.opacity = 0.7
-                        mCartClicked = false;
-                    }
-                }
-
-                Image {
-                    id: image
-                    x: 281
-                    y: 75
-                    width: 77
-                    height: 85
-                    source: "image/common/check.png"
-                    fillMode: Image.PreserveAspectFit
-                }
             }
-
-            Rectangle {
-                id: circleCart
-                x: 721
-                y: 86
-                width: 70
-                height: 70
-                color: "#ffffff"
-                radius: 35
-
-                Rectangle {
-                    x: 2
-                    y: 2
-                    width: 66
-                    height: 66
-                    color: "#9672db"
-                    radius: 33
-                    border.color: "#9672db"
-
-                    Text {
-                        id: textCartItemNum
-                        width: 66
-                        height: 66
-                        anchors.fill: parent
-                        color: "#ffffff"
-                        text: "0"
-                        font.pixelSize: 40
-                        font.family: fontBold.name
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                    }
-
-                }
-            }
-
         }
     }
     // ------------------------------------------------
@@ -238,81 +269,26 @@ Page {
 
     //---------------------------------------------------------------
 
-    SwipeView {
-        id: menuSwipeViewMilkTea
-        x: 83
-        y: 472
-        width: 914
-        height: 344
-        clip: true
-        currentIndex: 0
-        interactive: true
-
-        MenuPage_Tea{
-            id: pageMilkTea
-        }
-    }
-
-    SwipeView {
-        id: menuSwipeViewTea
-        x: 83
-        y: 1045
-        width: 914
-        height: 344
-        clip: true
-        currentIndex: 0
-        interactive: true
-
-        MenuPage_MilkTea{
-            id: pageTea
-        }
-    }
 
 
 
 
+    //Recommend Image (Upper)
 
-    Image {
-        id: imageRecommend
-        x: 535
-        y: 1045
-        source: "image/option_page/ok.png"
-    }
 
-    Image {
-        id: imageRecommend2
-        x: 877
-        y: 472
-        source: "image/option_page/ok.png"
-    }
+    //Recommend Image (Lower)
 
-    Image {
-        id: imageRecommend3
-        x: 227
-        y: 1045
-        source: "image/option_page/ok.png"
-    }
-
-    Image {
-        id: imageRecommend4
-        x: 191
-        y: 472
-        source: "image/option_page/ok.png"
-    }
 
     //---------------------------------------------------------------
 
-
-
-    WarningPopup{
-        id: warningPopup
-    }
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+/*##^## Designer {
+    D{i:5;anchors_height:100;anchors_width:100;anchors_x:38;anchors_y:17}D{i:8;anchors_height:100;anchors_width:100;anchors_x:38;anchors_y:17}
+D{i:14;anchors_height:100;anchors_width:100;anchors_x:38;anchors_y:17}D{i:20;anchors_height:100;anchors_width:100;anchors_x:38;anchors_y:17}
+}
+ ##^##*/

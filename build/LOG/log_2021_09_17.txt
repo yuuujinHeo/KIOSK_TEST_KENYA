@@ -1,0 +1,50 @@
+[2021-09-17 00:01:24]  [BACKEND]    CreateDB : 210917
+[2021-09-17 00:02:14]  [DB]         CreateDB : CREATE TABLE RB2021_09_17 (order_id INTEGER PRIMARY KEY ASC AUTOINCREMENT, time TEXT, menu TEXT, price INT, cardcomp TEXT, cardnum TEXT, appnum TEXT, trandate TEXT, iscancel TEXT, acqu_code TEXT, card_gb TEXT, version INT)
+[2021-09-17 00:02:24]  [BACKEND]    reloadSaleData
+[2021-09-17 00:02:34]  [DB]         ReloadDate 
+[2021-09-17 00:03:24]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 00:03:34]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 00:03:54]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [QML]       Enter Admin
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [BACKEND]    setReport
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         DayCheckout : 2021-09-170
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [BACKEND]    setReport
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         DayCheckout : 2021-09-170
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210914
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-14
+[2021-09-17 15:11:08]  [DB]         Content count : 12
+[2021-09-17 15:11:08]  [DB]         select_str : select * from RB2021_09_14
+[2021-09-17 15:11:08]  [DB]         reloadcontent load : 9
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [BACKEND]    reloadCheckinContent
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [BACKEND]    setReport
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         DayCheckout : 2021-09-170
+[2021-09-17 15:11:08]  [BACKEND]    reloadContent : 20210917
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [BACKEND]    setReport
+[2021-09-17 15:11:08]  [DB]         ReloadContent : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         Content load Fail : 2021-09-17
+[2021-09-17 15:11:08]  [DB]         DayCheckout : 2021-09-170
+[2021-09-17 15:11:09]  [BACKEND]    AddLogin : 관리자(LOGIN)
+[2021-09-17 15:11:09]  [DB]         CreateCheckDB : CREATE TABLE RB2021_09_17 (date TEXT, time TEXT, user TEXT, log TEXT)
+[2021-09-17 15:11:10]  [DB]         AddCheckDB : INSERT INTO RB2021_09_17 (date, time, user, log) VALUES ('2021_09_17', '15:11:09', '관리자', 'LOGIN')
+[2021-09-17 15:11:12]  [BACKEND]    AddLogin : 관리자(QUIT)
+[2021-09-17 15:11:12]  [DB]         AddCheckDB : INSERT INTO RB2021_09_17 (date, time, user, log) VALUES ('2021_09_17', '15:11:12', '관리자', 'QUIT')

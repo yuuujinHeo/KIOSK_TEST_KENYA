@@ -4,9 +4,8 @@
         <file>qtquickcontrols2.conf</file>
         <file>Page1.qml</file>
         <file>Page2.qml</file>
-        <file>AdminLogin.qml</file>
-        <file>MenuPage_MilkTea.qml</file>
         <file>MenuPage_Tea.qml</file>
+        <file>MenuPage_Coffee.qml</file>
         <file>DrinkItem.qml</file>
         <file>DrinkItemOption.qml</file>
         <file>font/lotteDreamBold.ttf</file>
@@ -21,7 +20,6 @@
         <file>image/credit/check_gray.png</file>
         <file>image/credit/credit_card.png</file>
         <file>image/credit/receipt.png</file>
-        <file>WarningPopup.qml</file>
         <file>image/credit/agree_cancel.png</file>
         <file>sound/buttonclick.wav</file>
         <file>image/order_page/sold_out.png</file>
@@ -38,23 +36,17 @@
         <file>image/option_page/ok.png</file>
         <file>image/option_page/option_select.png</file>
         <file>image/order_page/recommend.png</file>
-        <file>Page3.qml</file>
         <file>image/option_page/option.png</file>
-        <file>Page4.qml</file>
         <file>image/cart_page/cart.png</file>
         <file>image/cart_page/menu_remove.png</file>
         <file>image/cart_page/menu_add.png</file>
-        <file>Page5.qml</file>
         <file>image/credit_page/card_insert.png</file>
-        <file>Page6.qml</file>
         <file>image/complete_page/complete.png</file>
-        <file>Page7.qml</file>
         <file>image/common/back.png</file>
         <file>image/common/check.png</file>
         <file>image/common/pause.png</file>
         <file>image/option_page/option_soldout.png</file>
         <file>image/main_page/main_logo.png</file>
-        <file>Notice.qml</file>
         <file>image/notice_page/background.png</file>
         <file>image/notice_page/cleaning.png</file>
         <file>image/notice_page/maintenance.png</file>
@@ -65,12 +57,9 @@
         <file>image/notice_page/disconnected.png</file>
         <file>image/notice_page/discon.png</file>
         <file>image/option_page/ok_orin.png</file>
-        <file>AdminMain.qml</file>
-        <file>AdminDayReport.qml</file>
-        <file>AdminReceipts.qml</file>
-        <file>AdminSales.qml</file>
-        <file>AdminCheckin.qml</file>
-        <file>AdminMenu.qml</file>
-        <file>AdminReceiptsToday.qml</file>
+        <file>CartPage.qml</file>
+        <file>CartItem.qml</file>
+        <file>image/background_kenya.png</file>
+        <file>image/background_order.png</file>
     </qresource>
 </RCC>
