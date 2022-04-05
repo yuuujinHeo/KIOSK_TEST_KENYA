@@ -1,0 +1,12 @@
+[2022-04-05 14:00:51]  [OrderManage] clearCart
+[2022-04-05 14:02:29]  [OrderManage] clearCart
+[2022-04-05 14:06:56]  [OrderManage] clearCart
+[2022-04-05 14:07:44]  [OrderManage] clearCart
+[2022-04-05 14:09:43]  [OrderManage] clearCart
+[2022-04-05 14:11:19]  [OrderManage] clearCart
+[2022-04-05 14:17:01]  ================================
+[2022-04-05 14:17:07]  [OrderManage] clearCart
+[2022-04-05 14:17:49]  ================================
+[2022-04-05 14:17:55]  [OrderManage] clearCart
+[2022-04-05 14:19:03]  ================================
+[2022-04-05 14:19:09]  [OrderManage] clearCart

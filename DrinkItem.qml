@@ -59,7 +59,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
 //            font.bold: true
-            font.pixelSize: 28
+            font.pixelSize: 20
             lineHeight: 1.2
             visible: true
         }

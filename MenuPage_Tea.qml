@@ -16,8 +16,8 @@ Page {
 
     Component.onCompleted: {
         var max_col = 3;
-        for(var i=0; i<menu.getMenuNum("티"); i++){
-            listTea.model.append({"menu_name":menu.getMenuName("티",i),"menu_image":menu.getMenuImage("티",i)})
+        for(var i=0; i<menu.getMenuNum("아이스커피"); i++){
+            listTea.model.append({"menu_name":menu.getMenuName("아이스커피",i),"menu_image":menu.getMenuImage("아이스커피",i)})
         }
     }
 

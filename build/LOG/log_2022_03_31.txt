@@ -1,0 +1,6 @@
+[2022-03-31 09:57:00]  [OrderManage] clearCart
+[2022-03-31 09:57:24]  [OrderManage] removeOrder : 0
+[2022-03-31 09:57:27]  [OrderManage] removeOrder : 3
+[2022-03-31 09:57:27]  [OrderManage] removeOrder : 2
+[2022-03-31 09:57:28]  [OrderManage] removeOrder : 1
+[2022-03-31 09:57:28]  [OrderManage] removeOrder : 0

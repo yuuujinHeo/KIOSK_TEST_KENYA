@@ -88,7 +88,7 @@ Page {
             color: "#E7E6E6"
             Text {
                 color: "#141414"
-                text: "COFFEE"
+                text: "HOT"
                 anchors.fill: parent
                 font.family: fontBold.name
                 horizontalAlignment: Text.AlignHCenter
@@ -116,7 +116,7 @@ Page {
             color: "#E7E6E6"
             Text {
                 color: "#141414"
-                text: "TEA"
+                text: "ICE"
                 anchors.fill: parent
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 30
